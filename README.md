@@ -1,0 +1,2 @@
+# Django-In-Memory-Cache-A-Beginner-s-Guide-to-Caching
+A beginner-friendly Django project demonstrating how Local Memory Cache works in practice. It covers cache hits, cache misses, cache timeouts, retrieving and storing data with Django's cache framework, and manually clearing cached data through Django Admin. Built to help beginners understand caching concepts through a simple, practical example.
