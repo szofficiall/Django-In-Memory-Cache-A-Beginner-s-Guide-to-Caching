@@ -13,4 +13,5 @@ def clear_user_cache(modeladmin, request, queryset):
 @admin.register(YouTubeUser)
 class AdminYouTubeUser(admin.ModelAdmin):
     list_display = ["name", "email", "subscribers"]
+    ordering = ["name"]
     actions = [clear_user_cache]
