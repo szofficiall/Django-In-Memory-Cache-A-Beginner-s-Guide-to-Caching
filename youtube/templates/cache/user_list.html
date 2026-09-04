@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cache In Memory Cache</title>
+  </head>
+  <body>
+    {% if messages %}
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    {% endif %}
+    <h2>Users List Display</h2>
+    <table border="1" cellpadding="8">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Subscriber</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.subscribers }}</td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="4">No Users Available</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
